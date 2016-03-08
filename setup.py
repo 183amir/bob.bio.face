@@ -39,9 +39,13 @@ dist.Distribution(dict(setup_requires=['bob.extension']))
 from bob.extension.utils import load_requirements, find_packages
 install_requires = load_requirements()
 
-# The only thing we do in this file is to call the setup() function with all
+# The only thing we do in this file is to call the setup(
+    namespace_packages=['bob'],
+) function with all
 # parameters that define our package.
 setup(
+    namespace_packages=['bob'],
+
 
     # This is the basic information about your project. Modify all this
     # information before releasing code publicly.
